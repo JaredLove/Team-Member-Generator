@@ -1,36 +1,23 @@
-// importing Employee constructor 
-const Employee = require('./emp');
+// using Intern constructor 
+const Intern = require('../lib/intern');
 
+// creating intern object  
+test('create Intern', () => {
+    const intern = new Employee('Jay', 10, 'lovejared91@yahoo.com', 'UTSA');
+    
+    expect(intern.school) .toEqual(expect.any(String));
+});
 
-// intern constructor extends employee constructor 
-class Intern extends Employee  {
+// gets school from getSchool()
+test('gets school', () => {
+    const intern = new Employee('Jay', 10, 'lovejared91@yahoo.com', 'UTSA');
+    
+    expect(intern.getSchool()).toEqual(expect.stringContaining(intern.school.toString()));
+});
 
-    constructor (name, id, email, school) {
+// gets role from getRole()
+test('gets role', () => {
+    const intern = new Employee('Jay', 10, 'lovejared91@yahoo.com', 'UTSA');
 
-        // calling employee constructor
-
-        super (name, id, email); 
-
-        this.school = school; 
-
-    }
-
-    // returning school from input 
-
-    getSchool () {
-
-        return this.school;
-
-    }
-
-    //role to intern
-
-    getRole () {
-
-        return "Intern";
-
-    }
-}
-
-// to be exported 
-module.exports = Intern; 
+    expect(intern.getRole()).toEqual("Intern");
+}); 

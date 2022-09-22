@@ -1,50 +1,39 @@
-class Emp {
-    constructor (name, id, email) {
+// using Employee constructor 
+const Employee = require('../lib/emp');
 
-        this.name = name;
+// creates employee object 
+test('create employee', () => {
+    const employee = new Employee('Jay', 10, 'lovejared91@yahoo.com');
 
-        this.id = id;
+    expect(employee.name).toEqual(expect.any(String));
+    expect(employee.id).toEqual(expect.any(Number));
+    expect(employee.email).toEqual(expect.any(String));
+});
 
-        this.email = email 
+// gets id from getId() 
+test('gets name', () => {
+    const employee = new Employee('Jay', 10, 'lovejared91@yahoo.com');
 
-    }
+    expect(employee.getName()).toEqual(expect.any(String));
+});
 
-    
-    // return name
+// gets id from getId() 
+test('gets ID', () => {
+    const employee = new Employee('Jay', 10, 'lovejared91@yahoo.com');
 
-    getName () {
+    expect(employee.getId()).toEqual(expect.any(Number));
+});
 
-        return this.name;
+// gets emails from getEmail()
+test('gets email', () => {
+    const employee = new Employee('Jay', 10, 'lovejared91@yahoo.com');
 
-    }
+    expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
+});
 
-    
-    // return ID 
+// gets role from getRole()
+test('gets role', () => {
+    const employee = new Employee('Jay', 10, 'lovejared91@yahoo.com');
 
-    getId () {
-
-        return this.id;
-
-    }   
-
-
-    // return email 
-
-    getEmail () {
-
-        return this.email;
-
-    }
-
-    
-    // return type 
-
-    getRole () {
-
-        return 'Employee'; 
-
-    }
-};
-
-// to be exported 
-module.exports = Emp; 
+    expect(employee.getRole()).toEqual("Employee");
+}); 
