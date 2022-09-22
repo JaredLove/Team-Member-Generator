@@ -1,0 +1,23 @@
+{
+  "name": "mgtd",
+  "version": "1.0.0",
+  "description": "Team Member Generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaredLove/Team-Member-Generator.git"
+  },
+  "author": "Jared Love",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JaredLove/Team-Member-Generator/issues"
+  },
+  "homepage": "https://github.com/JaredLove/Team-Member-Generator#readme"
+}
