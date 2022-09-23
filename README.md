@@ -8,6 +8,10 @@ Build you a Team Member website with some user input
 
 Nodejs css
 
+# license
+
+MIT
+
 
 # sample
 
